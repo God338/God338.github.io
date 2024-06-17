@@ -1,3 +1,4 @@
+markdown
 # 项目名称
 快导航网
 https://www.hifast.cn/
