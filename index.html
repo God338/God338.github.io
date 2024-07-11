@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>极简个人网站模板</title>
+    <title>个人网站模板</title>
     <style>
-        /* 基础样式 */
         body, html {
             margin: 0;
             padding: 0;
@@ -39,21 +38,48 @@
             background: #333;
             color: #fff;
             text-align: center;
-            padding: 10px 20px;
+            padding: 20px 20px 0;
+        }
+        /* 常用网站链接样式 */
+        .links {
+            margin: 20px 0;
+            padding: 10px;
+            background: #f2f2f2;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        .links h3 {
+            margin-bottom: 10px;
+        }
+        .links ul {
+            list-style: none;
+            padding: 0;
+        }
+        .links li {
+            display: inline;
+            margin-right: 10px;
+        }
+        .links a {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .links a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <!-- 头部 -->
     <header>
-        <h1>欢迎来到我的网站</h1>
+        <h1>我的网站</h1>
     </header>
     <!-- 导航栏 -->
     <nav>
         <ul>
-            <li><a href="#about">关于</a></li>
-            <li><a href="#work">作品</a></li>
-            <li><a href="#contact">联系</a></li>
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#work">我的作品</a></li>
+            <li><a href="#contact">联系方式</a></li>
         </ul>
     </nav>
     <!-- 主内容区域 -->
@@ -74,9 +100,21 @@
             <p>这里是我的联系方式。</p>
         </section>
     </main>
-    <!-- 页脚 -->
+    <!-- 常用网站链接区域 -->
     <footer>
-        <p>&copy; 2024 我的网站. 版权所有。</p>
+        <div class="links">
+            <h3>常用网站链接</h3>
+            <ul>
+                <li><a href="https://www.hifast.cn/" target="_blank">快导航网</a></li>
+                <li><a href="https://www.example2.com" target="_blank">网站2</a></li>
+                <li><a href="https://www.example3.com" target="_blank">网站3</a></li>
+                <!-- 更多链接可以在这里添加 -->
+            </ul>
+        </div>
+        <!-- 页脚版权信息 -->
+        <div class="copyright">
+            <p>&copy; 2024 我的网站. 版权所有。</p>
+        </div>
     </footer>
 </body>
 </html>
