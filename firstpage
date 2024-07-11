@@ -1,47 +1,31 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的网站</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 0;
-        }
-        h1 {
-            text-align: center;
-            font-size: 3em;
-            color: #ff6347; /* 标题颜色 */
-            margin-top: 50px; /* 标题与顶部的距离 */
-        }
-        p {
-            max-width: 800px; /* 段落最大宽度 */
-            margin: 20px auto; /* 段落居中显示 */
-            line-height: 1.5; /* 行高 */
-        }
-        button {
-            display: block;
-            margin: 20px auto; /* 按钮居中显示 */
-            padding: 10px 20px; /* 按钮内边距 */
-            background-color: #ff6347; /* 按钮背景颜色 */
-            color: white; /* 按钮文字颜色 */
-            border: none; /* 无边框 */
-            border-radius: 5px; /* 圆角 */
-            cursor: pointer; /* 鼠标指针形状 */
-        }
-    </style>
-</head>
-<body>
-    <h1>欢迎来到我的网站！</h1>
-    <p>这是一段介绍。在这里可以写很多话，让访问者了解你的网站是做什么的。</p>
-    <button id="goToMainPage">跳转到主页面</button>
-    <script>
-        document.getElementById('goToMainPage').onclick = function() {
-            window.location.href = 'index.html'; // 将此处替换为您的主页面的URL或相对路径
-        };
-    </script>
-</body>
-</html>
+/* 链接分类样式 */
+.link-category {
+    margin-bottom: 20px;
+}
+
+.link-category h4 {
+    margin-bottom: 10px;
+}
+
+.link-category ul {
+    list-style: none;
+    padding: 0;
+}
+
+.link-category li {
+    display: inline;
+    margin-right: 10px;
+}
+
+/* 可以为每个类别添加不同的颜色或背景色 */
+.tools a {
+    color: #0066cc;
+}
+
+.games a {
+    color: #ff6600;
+}
+
+.resources a {
+    color: #009900;
+}
