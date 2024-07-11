@@ -1,66 +1,82 @@
-
-```html
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的网站</title>
+    <title>极简个人网站模板</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+        /* 基础样式 */
+        body, html {
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
         }
-        h1 {
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
             text-align: center;
-            font-size: 3em;
-            color: #ff6347; /* 标题颜色 */
-            margin-top: 50px; /* 标题与顶部的距离 */
         }
-        p {
-            max-width: 800px; /* 段落最大宽度 */
-            margin: 20px auto; /* 段落居中显示 */
-            line-height: 1.5; /* 行高 */
+        nav ul {
+            list-style: none;
+            padding: 0;
         }
-        .module {
-            border: 1px solid #ccc; /* 模块边框 */
-            border-radius: 5px; /* 模块圆角 */
-            margin: 20px auto; /* 模块居中显示 */
-            padding: 20px; /* 模块内边距 */
-            width: 60%; /* 模块宽度 */
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
         }
-        .links {
-            display: flex; /* 使用flex布局 */
-            justify-content: space-around; /* 链接左右对齐 */
-            margin-bottom: 20px; /* 底部间距 */
+        nav a {
+            color: #fff;
+            text-decoration: none;
         }
-        .upload {
-            width: 300px; /* 上传区域宽度 */
-            height: 200px; /* 上传区域高度 */
-            border: 2px dashed #ccc; /* 上传区域边框 */
-            border-radius: 5px; /* 上传区域圆角 */
-            text-align: center; /* 文字居中显示 */
-            line-height: 200px; /* 垂直居中 */
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
         }
     </style>
 </head>
 <body>
-    <h1>欢迎来到我的网站！</h1>
-    <div class="module">这是一段介绍。在这里可以写很多话，让访问者了解你的网站是做什么的。</div>
-    <div class="module">这里是一些网站的链接：</div>
-    <div class="links">
+    <!-- 头部 -->
+    <header>
+        <h1>欢迎来到我的网站</h1>
+    </header>
+    <!-- 导航栏 -->
+    <nav>
         <ul>
-            <li><a href="https://hellogithub.com/" target="_blank">hellogithub</a></li>
-            <li><a href="https://www.gndown.com/" target="_blank">绿软小站</a></li>
-            <li><a href="https://m.downza.cn/" target="_blank">下载之家</a></li>
-            <li><a href="https://www.hifast.cn/" target="_blank">快导航网</a></li>
-            <!-- 在此处添加更多网站链接 -->
+            <li><a href="#about">关于</a></li>
+            <li><a href="#work">作品</a></li>
+            <li><a href="#contact">联系</a></li>
         </ul>
-    </div>
-    <div class="module">您可以将文件拖拽到这里上传：</div>
-    <div class="upload">将文件拖拽到这里上传</div>
+    </nav>
+    <!-- 主内容区域 -->
+    <main>
+        <!-- 关于我 -->
+        <section id="about">
+            <h2>关于我</h2>
+            <p>这里是关于我的介绍。</p>
+        </section>
+        <!-- 我的作品 -->
+        <section id="work">
+            <h2>我的作品</h2>
+            <p>这里是我的作品展示。</p>
+        </section>
+        <!-- 联系方式 -->
+        <section id="contact">
+            <h2>联系方式</h2>
+            <p>这里是我的联系方式。</p>
+        </section>
+    </main>
+    <!-- 页脚 -->
+    <footer>
+        <p>&copy; 2024 我的网站. 版权所有。</p>
+    </footer>
 </body>
 </html>
-```
