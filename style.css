@@ -1,5 +1,5 @@
 body {
-    background-image: url('https://cn.bing.com/images/search?view=detailV2&ccid=Ey6sB5Vo&id=7171D5CF5FBB0E5A735240305F177AABDD54B069&thid=OIP.Ey6sB5VoR7ZdTRktO7MKZAHaE8&mediaurl=https%3A%2F%2Fimg-s-msn-com.akamaized.net%2Ftenant%2Famp%2Fentityid%2FBBmjWeQ.img&exph=1544&expw=2316&q=%e6%98%9f%e7%a9%ba&simid=607990473131651559&form=IRPRST&ck=D541E835F1C0A3EEF54CF7F19C449B2A&selectedindex=0&itb=0&pc=EMMX01&ajaxhist=0&ajaxserp=0&vt=4.url'); /* 设置背景图片 */
+    background-image: url('background.url'); /* 设置背景图片 */
     background-size: cover; /* 覆盖整个页面 */
     background-repeat: no-repeat; /* 不重复背景图片 */
 }
