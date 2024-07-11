@@ -1,3 +1,5 @@
+
+```html
 <!DOCTYPE html>
 <html lang="zh">
 <head>
@@ -22,6 +24,13 @@
             margin: 20px auto; /* 段落居中显示 */
             line-height: 1.5; /* 行高 */
         }
+        .module {
+            border: 1px solid #ccc; /* 模块边框 */
+            border-radius: 5px; /* 模块圆角 */
+            margin: 20px auto; /* 模块居中显示 */
+            padding: 20px; /* 模块内边距 */
+            width: 60%; /* 模块宽度 */
+        }
         .links {
             display: flex; /* 使用flex布局 */
             justify-content: space-around; /* 链接左右对齐 */
@@ -39,7 +48,8 @@
 </head>
 <body>
     <h1>欢迎来到我的网站！</h1>
-    <p>这是一段介绍。在这里可以写很多话，让访问者了解你的网站是做什么的。</p>
+    <div class="module">这是一段介绍。在这里可以写很多话，让访问者了解你的网站是做什么的。</div>
+    <div class="module">这里是一些网站的链接：</div>
     <div class="links">
         <ul>
             <li><a href="https://hellogithub.com/" target="_blank">hellogithub</a></li>
@@ -49,6 +59,8 @@
             <!-- 在此处添加更多网站链接 -->
         </ul>
     </div>
+    <div class="module">您可以将文件拖拽到这里上传：</div>
     <div class="upload">将文件拖拽到这里上传</div>
 </body>
 </html>
+```
