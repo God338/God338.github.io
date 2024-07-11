@@ -6,15 +6,41 @@
     <title>我的网站</title>
     <style>
         body {
-            background-image: url('background.jpg'); /* 设置背景图片 */
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            font-size: 3em;
+            color: #ff6347; /* 标题颜色 */
+            margin-top: 50px; /* 标题与顶部的距离 */
+        }
+        p {
+            max-width: 800px; /* 段落最大宽度 */
+            margin: 20px auto; /* 段落居中显示 */
+            line-height: 1.5; /* 行高 */
+        }
+        .links {
+            display: flex; /* 使用flex布局 */
+            justify-content: space-around; /* 链接左右对齐 */
+            margin-bottom: 20px; /* 底部间距 */
+        }
+        .upload {
+            width: 300px; /* 上传区域宽度 */
+            height: 200px; /* 上传区域高度 */
+            border: 2px dashed #ccc; /* 上传区域边框 */
+            border-radius: 5px; /* 上传区域圆角 */
+            text-align: center; /* 文字居中显示 */
+            line-height: 200px; /* 垂直居中 */
         }
     </style>
 </head>
 <body>
     <h1>欢迎来到我的网站！</h1>
-    <p>这是一个示例网页。</p>
+    <p>这是一段介绍。在这里可以写很多话，让访问者了解你的网站是做什么的。</p>
     <div class="links">
-        <h2>常用网站链接</h2>
         <ul>
             <li><a href="https://www.bing.com" target="_blank">必应</a></li>
             <li><a href="https://www.baidu.com" target="_blank">百度</a></li>
@@ -23,5 +49,6 @@
             <!-- 在此处添加更多网站链接 -->
         </ul>
     </div>
+    <div class="upload">将文件拖拽到这里上传</div>
 </body>
 </html>
