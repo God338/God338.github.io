@@ -1,0 +1,10 @@
+上传背景图片：
+将背景图片上传到你的GitHub仓库的 images 文件夹中。
+更新CSS中的图片路径：
+将CSS中的 url('background.jpg') 替换为 url('images/background.jpg') 。
+测试网站：
+在本地测试网站，确保所有功能和样式都按预期工作。
+推送到GitHub：
+将更改推送到你的GitHub仓库。
+访问网站：
+访问你的GitHub Pages网站，查看效果。
