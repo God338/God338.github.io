@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>个人网站模板</title>
+    <title>个性化网站</title>
+    <!-- 引入Pacifico字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <style>
         body, html {
             margin: 0;
@@ -11,64 +13,84 @@
             font-family: Arial, sans-serif;
             background: url('background.jpg') no-repeat center center fixed;
             background-size: cover;
-            overflow-x: hidden; /* 防止横向滚动 */
+            overflow-x: hidden;
         }
-        header, nav, main, footer {
-            margin: auto;
-            max-width: 1200px;
+        * {
+            box-sizing: border-box;
         }
         header {
             background: rgba(51, 51, 51, 0.7);
             color: #fff;
-            padding: 10px 20px;
+            padding: 20px;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: relative;
         }
-        nav {
-            display: none; /* 默认隐藏导航栏 */
+        .profile-pic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+        }
+        .menu-icon {
             position: absolute;
             top: 20px;
-            left: -100%;
-            width: 100%;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #fff;
+        }
+        nav {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 100%;
             background: rgba(0, 0, 0, 0.9);
-            transition: left 0.3s ease;
+            transition: transform 0.3s ease;
+            overflow-y: auto;
         }
         nav ul {
             list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
+            padding: 20px;
+            margin: 0;
         }
-        nav ul li {
-            margin: 10px 0;
-        }
-        nav a {
+        nav ul li a {
             color: #fff;
             text-decoration: none;
-            font-size: 20px;
-        }
-        .menu-icon {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            cursor: pointer;
-        }
-        .menu-icon:hover {
-            opacity: 0.8;
+            display: block;
+            padding: 10px 0;
         }
         .main-content {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-gap: 20px;
+            max-width: 1200px;
+            margin: auto;
             padding: 20px;
         }
+        .section {
+            margin-bottom: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-left: 5px solid #000;
+            border-right: 5px solid #000;
+        }
+        .section:not(:last-child) {
+            border-bottom: 3px double #000;
+        }
+        .section img {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: auto;
+        }
         .title {
-            grid-column: 1 / -1;
             font-family: 'Pacifico', cursive;
             color: #3498db;
             font-size: 36px;
-            text-align: center;
+            margin-bottom: 10px;
         }
         .search-bar {
             background: #333;
@@ -76,27 +98,27 @@
             padding: 10px 20px;
             display: flex;
             align-items: center;
+            margin: 20px 0;
         }
         .search-bar input {
+            flex-grow: 1;
             border: none;
             background: transparent;
             color: #fff;
             padding: 0 10px;
-            width: 80%;
             font-size: 16px;
         }
         .search-bar input::placeholder {
             color: #aaa;
         }
-        .section {
-            border: 2px solid #000;
-            padding: 20px;
-            margin-bottom: 20px;
+        .search-engine-selector {
+            cursor: pointer;
+            margin-right: 10px;
         }
         .links {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
         }
         .links a {
             display: block;
@@ -116,14 +138,31 @@
             padding: 20px;
             background: rgba(51, 51, 51, 0.7);
             color: #fff;
+            position: relative;
         }
         @media (max-width: 768px) {
-            .links {
-                grid-template-columns: 1fr;
+            header {
+                padding: 10px;
+            }
+            .profile-pic {
+            width: 80px;
+            height: 80px;
+            }
+            .menu-icon {
+                top: 10px;
+                right: 10px;
+            }
+            .section {
+                padding: 10px;
+            }
+            .search-bar {
+                padding: 10px;
+            }
+            .search-bar input {
+                font-size: 14px;
             }
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
@@ -135,35 +174,55 @@
         </ul>
     </nav>
     <header>
-        <h1 class="title">我的网站</h1>
+        <img class="profile-pic" src="profile.jpg" alt="Profile Picture">
+        <div class="title">我的网站</div>
     </header>
     <div class="main-content">
-        <div class="search-bar">
-            <input type="text" placeholder="使用必应搜索...">
+        <div class="section">
+            <img src="introduction_image.jpg" alt="Introduction Image">
+            <div class="title">介绍页面标题</div>
+            <p>这里是介绍页面的详细内容。</p>
         </div>
         <div class="section">
-            <p>这里是介绍部分，可以录入文本。</p>
+            <div class="search-bar">
+                <span class="search-engine-selector" onclick="switchSearchEngine()">SE</span>
+                <input type="text" id="searchInput" placeholder="搜索...">
+            </div>
         </div>
-        <div class="section links">
-            <a href="https://www.example1.com" target="_blank">网站1</a>
-            <a href="https://www.example2.com" target="_blank">网站2</a>
-            <a href="https://www.example3.com" target="_blank">网站3</a>
-            <a href="https://www.example4.com" target="_blank">网站4</a>
-            <a href="https://www.example5.com" target="_blank">网站5</a>
-            <a href="https://www.example6.com" target="_blank">网站6</a>
-            <a href="https://www.example7.com" target="_blank">网站7</a>
-            <a href="https://www.example8.com" target="_blank">网站8</a>
-            <a href="https://www.example9.com" target="_blank">网站9</a>
+        <div class="section">
+            <div class="title">常用网站链接</div>
+            <div class="links">
+                <a href="https://www.bing.com/search?q=" target="_blank">
+                    <div>必应</div>
+                </a>
+                <a href="https://www.google.com/search?q=" target="_blank">
+                    <div>谷歌</div>
+                </a>
+                <!-- 更多链接 -->
+            </div>
         </div>
+        <!-- 更多内容区域 -->
     </div>
     <footer class="copyright">
         <p>&copy; 2024 我的网站. 版权所有。</p>
     </footer>
 
     <script>
+        var searchEngine = 'bing'; // 默认搜索引擎
+        function switchSearchEngine() {
+            searchEngine = searchEngine === 'bing' ? 'google' : 'bing';
+            document.getElementById('searchInput').placeholder = '搜索... (' + searchEngine.toUpperCase() + ')';
+        }
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                var query = this.value;
+                var searchUrl = searchEngine === 'bing' ? 'https://www.bing.com/search?q=' + query : 'https://www.google.com/search?q=' + query;
+                window.open(searchUrl, '_blank');
+            }
+        });
         function toggleMenu() {
             var navbar = document.getElementById("navbar");
-            navbar.style.left = navbar.style.left === "0px" ? "-100%" : "0px";
+            navbar.style.transform = navbar.style.transform !== 'translateX(300px)' ? 'translateX(300px)' : 'translateX(0)';
         }
     </script>
 </body>
